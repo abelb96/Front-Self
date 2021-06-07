@@ -212,3 +212,18 @@
 .curtir-resposta {
   align-self: flex-end;
 }
+
+.excluir {
+  background-color: rgb(255, 48, 48);
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 2px;
+  border-radius: 6px;
+}
+
+.excluir:active {
+  background-color: rgb(185, 52, 52);
+}
