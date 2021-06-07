@@ -1,0 +1,97 @@
+.login-apresentacao {
+  display: flex;
+  height: 910px;
+  background-image: url(../../../../assets/pag/contact.jpg);
+  align-items: center;
+}
+
+.login-formulario {
+  width: 420px;
+  height: 362px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-self: center;
+  border-radius: 12px;
+  background-color: rgba(71, 101, 177);
+}
+
+.engloba-Login {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.topo-formLogin {
+  margin-bottom: 42px;
+}
+
+.topo-formLogin h3 {
+  margin-top: 32px;
+  color: rgb(255, 136, 0);
+  font-size: 32px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.formulario-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario-login .item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 26px;
+  width: 100%;
+}
+
+.formulario-login .item input{
+  height: 42px;
+  width: 380px;
+  margin: 0 10px 0 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: normal;
+  padding-left: 20px;
+  outline: 0;
+  border: 0;
+}
+
+.formulario-login button {
+  height: 32px;
+  width: 380px;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: rgb(255, 136, 0);
+  cursor: pointer;
+  border: 0;
+  border: 1px solid rgb(133, 156, 216);
+}
+
+.formulario-login button:active {
+  background-color: rgb(185, 99, 0);
+}
+
+.box-opt {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  margin-top: 52px;
+  font-size: 18px;
+}
+
+.box-opt a {
+  text-decoration: underline;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  margin-top: -28px;
+}

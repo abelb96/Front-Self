@@ -1,0 +1,28 @@
+<div (click)="sidAbre();" class="boxfoto-fhome" *ngIf="(user$ | async) as user;">
+  <div class="nome-usuario"><h2>{{nome}}</h2></div>
+</div>
+
+
+<div [ngClass]="{ 'active-siduser' : abre }">
+  <div class="menu-baruser">
+
+    <div class="menu-sideuser" onselectstart="return false">
+
+
+
+      <div class="box-sideusermenu" (click)='Meu();'>
+        <a>Meu perfil</a>
+      </div>
+
+      <div class="box-sideusermenu" routerLink='/forum/meus-topicos'>
+        <a>Meus Tópicos</a>
+      </div>
+
+      <div (click)='logout();' class="box-sideusermenu logout">
+        <a>Sair</a>
+      </div>
+
+    </div>
+  </div>
+  <div class="overlay" (click)="sidAbre()"></div>
+</div>

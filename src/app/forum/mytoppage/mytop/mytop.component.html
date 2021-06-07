@@ -1,0 +1,33 @@
+<main class="inicial">
+    <section *ngFor="let topico of topicos"  class="topico limitar-container">
+      <div class="limitar-container2">
+            <div class="card-topico">
+
+                <div class="cards-topicos">
+
+                    <div class="criado-por">Criado por: <span (click)='perfil(topico.id_usuario);'>{{topico.criado_por}}</span></div>
+
+                    <div class="data-criacao">Data de Criação: <span>{{topico.data}}</span></div>
+
+                    <div class="titulo-topico" routerLink="/forum/topico/{{topico.id_topico}}"><h2>{{topico.titulo}}</h2></div>
+
+                    <div class="conteudo-topico">
+                      <p>{{topico.conteudo}}</p>
+                    </div>
+
+                    <div class ="categoria-topico">
+                        <span>{{topico.categoria}}</span>
+                        <span>{{topico.total_respostas}}</span>
+                        <span routerLink="/forum/topico/{{topico.id_topico}}">Respostas.</span>
+                    </div>
+
+                    <form class="curtir-topico">
+                      <span>{{topico.likes}}</span>
+                      <span>Curtidas</span>
+                    </form>
+                </div>
+            </div>
+          </div>
+    </section>
+
+</main>

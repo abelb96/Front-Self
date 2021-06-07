@@ -1,0 +1,56 @@
+<form #form="ngForm" [formGroup]="editaForm" class="form-perfil limitar-container" *ngIf="perfil" (submit)="edita();" >
+
+
+  <div class="limitar-container glob">
+
+    <div class="item">
+        <div><h2>Nome: <span>{{perfil.nome}}</span></h2></div>
+        <div class="input">
+            <input formControlName="nome" type="text" placeholder="Digite aqui o seu nome editado">
+          </div>
+          <ap-vmessage *ngIf="editaForm.get('nome').errors?.required && (form.submitted || editaForm.get('nome').touched)" text="*O campo nome é obrigatório"></ap-vmessage>
+          <ap-vmessage *ngIf="editaForm.get('nome').errors?.minlength && (form.submitted || editaForm.get('nome').touched)" text="*mínimo de caracter: 3 caracteres"></ap-vmessage>
+          <ap-vmessage *ngIf="editaForm.get('nome').errors?.maxlength && (form.submitted || editaForm.get('nome').touched)" text="*limite de caracter: 12 caracteres"></ap-vmessage>
+    </div>
+
+    <div class="item">
+        <div><h2>Sobrenome: <span>{{perfil.sobrenome}}</span></h2></div>
+        <div class="input">
+          <input formControlName="sobrenome" type="text" placeholder="Digite aqui o seu sobrenome editado">
+        </div>
+        <ap-vmessage *ngIf="editaForm.get('sobrenome').errors?.required && (form.submitted || editaForm.get('sobrenome').touched)" text="*O campo sobrenome é obrigatório"></ap-vmessage>
+        <ap-vmessage *ngIf="editaForm.get('sobrenome').errors?.minlength && (form.submitted || editaForm.get('sobrenome').touched)" text="*mínimo de caracter: 3 caracteres"></ap-vmessage>
+        <ap-vmessage *ngIf="editaForm.get('sobrenome').errors?.maxlength && (form.submitted || editaForm.get('sobrenome').touched)" text="*limite de caracter: 20 caracteres"></ap-vmessage>
+    </div>
+
+    <div class="item">
+        <div><h2>Telefone: <span>{{perfil.telefone}}</span></h2></div>
+        <div class="input">
+          <input formControlName="telefone" type="text" placeholder="Digite aqui o seu telefone editado" mask='(00) 00000-0000'>
+        </div>
+        <ap-vmessage *ngIf="editaForm.get('telefone').errors?.required && (form.submitted || editaForm.get('telefone').touched)" text="*O campo telefone é obrigatório"></ap-vmessage>
+        <ap-vmessage *ngIf="editaForm.get('telefone').errors?.minlength && (form.submitted || editaForm.get('telefone').touched)" text="*mínimo de números: 10 números"></ap-vmessage>
+        <ap-vmessage *ngIf="editaForm.get('telefone').errors?.maxlength && (form.submitted || editaForm.get('telefone').touched)" text="*limite de números: 11 números"></ap-vmessage>
+    </div>
+
+    <div class="item">
+        <div><h2>Email</h2></div>
+        <div class="input">
+          <p>{{perfil.email}}</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div><h2>Senha</h2></div>
+        <div class="input">
+          <button class="botao-senha" type="button">Mudar Senha</button>
+        </div>
+    </div>
+
+    <div class="botoes">
+      <button class="botao-criar" type="submit">Editar</button>
+      <button class="botao-voltar" type="button" botaovoltar>Voltar</button>
+    </div>
+
+  </div>
+</form>

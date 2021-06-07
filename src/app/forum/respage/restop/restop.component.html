@@ -1,0 +1,19 @@
+<main class="main-criatopico limitar-container" *ngIf="titulo_topico">
+  <form #form="ngForm"  [formGroup]="criaRes" class="criatop-form" (submit)='addRes();'>
+
+      <div class="textarea">
+        <h2>Responder Tópico</h2>
+        <h3>{{titulo_topico}}</h3>
+        <textarea formControlName="resposta" placeholder="Resposta..."></textarea>
+        <ap-vmessage *ngIf="criaRes.get('resposta').errors?.required && (form.submitted || criaRes.get('resposta').touched)" text="*O campo Título é obrigatório!"></ap-vmessage>
+        <ap-vmessage *ngIf="criaRes.get('resposta').errors?.minlength && criaRes.get('resposta').touched" text="*mínimo de caracter: 107 caracteres"></ap-vmessage>
+        <ap-vmessage *ngIf="criaRes.get('resposta').errors?.maxlength" text="*limite de caracter: 970 caracteres"></ap-vmessage>
+      </div>
+
+      <div class="botoes">
+        <button class="botao-criar" type="submit">Responder</button>
+        <button class="botao-voltar" botaovoltar>Voltar</button>
+      </div>
+
+  </form>
+</main>

@@ -1,0 +1,27 @@
+.text-center {
+  text-align: center;
+  z-index: 100;
+}
+
+.alert {
+  width: 100%;
+  position: absolute;
+}
+
+.alert-danger {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  color: white;
+  font-size: 20px;
+  background-color: red;
+}
+
+.alert-success{
+  background-color: rgb(78, 224, 78);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  color: white;
+  font-size: 20px;
+}

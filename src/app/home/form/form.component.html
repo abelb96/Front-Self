@@ -1,0 +1,97 @@
+<main class="home-apresentacao" id="guardar">
+  <section class="limitar-container">
+          <div class="box-formulario">
+
+              <div class="frases">
+                  <div class="box-p"><p>Sem espaço em casa ou em sua empresa?</p></div>
+                  <div class="box-p"><p>Vai se mudar e não sabe onde guardar suas coisas com segurança?</p></div>
+                  <div class="box-p"><p>Aquela reforma ameaça seus móveis?</p></div>
+                  <div class="box-p"><p>Então você Chegou ao lugar certo!</p></div>
+              </div>
+
+              <div class="engloba">
+
+                <div class="topo-form">
+                        <h3>O que você quer guardar?</h3>
+                    </div>
+
+            <form id="form" name="form" class="formulario-home" action="/home"  method="POST">
+
+                    <div class="item">
+                        <div>
+                            <input id="nome" type="text" name="nome" placeholder="Nome" required>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>
+                            <input id=email type="email" name="email" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>
+                            <input id="telefone" type="tel" name="telefone"  placeholder="Telefone com DDD" pattern="[ 0-9()#&+-=.]+" title="Apenas números e caracteres de telefone ( - , () , . , etc) serão aceitos">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="fala"><h3>Box de interesse:</h3></div>
+                        <div>
+                            <select class="metro" id="metragem" name="metro">
+                                <option value="" id="valor">Selecione um Tipo...</option>
+                                <option class="maleiro" value="Maleiro">
+                                Maleiro
+                                </option>"
+                                <option value="Pequeno">
+                                Pequeno
+                                </option>
+                                <option value="Medio">
+                                Médio
+                                </option>
+                                <option value="Grande">
+                                Grande
+                                </option>
+                                <option value="Super Grande">
+                                Super Grande
+                                </option>
+                                <option value="outros">
+                                Outros...
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="fala"><h3>Melhor horário para entrar em contato:</h3></div>
+                            <div>
+                                <select id="hora" name="hora">
+
+                                    <option value="">Selecione um horário...</option>
+
+
+                                    <!--{% for hora in horas %}
+
+                                    {% if hora.valor == '' %}
+
+                                     {% else %}
+                                    <option value="{{hora.valor}}">
+                                        {{hora.valor}}
+                                    </option>"
+                                        {%endif%}
+
+                                    {% endfor %}-->
+                                </select>
+
+                                <textarea id="msg" name="msg" cols="30" rows="8" placeholder="Mensagem (opcional)"></textarea>
+
+                            </div>
+                    </div>
+                    <button id="botao" type="submit">Enviar</button>
+            </form>
+
+            </div>
+          </div>
+  </section>
+</main>
+

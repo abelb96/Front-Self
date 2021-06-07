@@ -1,0 +1,61 @@
+<main class="main-topico">
+
+  <button class="responder" (click)="restop(topico.topico_id);">Responder Tópico</button>
+
+  <section *ngIf="topico" class="box-topico limitar-container">
+    <div class="limitar-container2">
+          <div class="card-topico">
+
+              <div class="cards-topico">
+
+                <div class="criado-porT">Criado por: <span (click)='perfil(topico.id_usuario);'>{{topico.criado_por}}</span></div>
+
+                <div class="span">
+                  <span class="categoria">{{topico.categoria}}</span>
+                </div>
+                <div class="box-titulo">
+                  <h2>{{topico.titulo}}</h2>
+                </div>
+
+                <div class="box-quadrado">
+                  <div class="box-conteudo">
+                    <p>{{topico.conteudo}}</p>
+                  </div>
+                </div>
+
+                <div class="curtir-topico">
+                <button  (click)='curtir(topico.topico_id);'><i class="fa fa-heart-o" [ngClass]="{'curti' : curtiu}"></i></button>
+                </div>
+
+              </div>
+          </div>
+        </div>
+  </section>
+
+
+
+  <section class="resposta limitar-container" *ngFor="let resposta of respostas">
+    <div class="limitar-container2">
+          <div class="card-resposta">
+
+              <div class="cards-resposta">
+                  <div class="card-component">
+                    <div class="criado-por">Respondido por: <span routerLink="/forum/perfil/{{resposta.usuario_id}}">{{resposta.usuario}}</span></div>
+
+                    <div class="data-criacao">Data de Resposta: <span>{{resposta.data}}</span></div>
+
+                  </div>
+                  <div class="conteudo-resposta">
+                    <p>{{resposta.resposta}}</p>
+                  </div>
+
+                  <div class="curtir-resposta">
+                    <f-liketop></f-liketop>
+                  </div>
+
+              </div>
+          </div>
+        </div>
+  </section>
+
+</main>

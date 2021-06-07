@@ -1,0 +1,137 @@
+.form-perfil{
+  display: flex;
+  flex-flow: column wrap;
+  height: 80%;
+  min-height: 800px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.glob {
+  width: 400px;
+  height: 80%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  background-color: #0686e7;
+  border-radius: 12px;
+  margin-top: -16px;
+}
+
+.item {
+  width: 100%;
+  margin: 18px 0;
+}
+
+.item span {
+  color: black;
+  font-size: 20px;
+}
+
+
+.item h2 {
+  text-align: center;
+  color: rgb(255, 136, 0);
+  font-weight: 500;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input input{
+  width: 90%;
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 4px;
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input input::placeholder {
+  font-weight: normal;
+  color: lightblue;
+}
+
+.input p{
+  font-size: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 6px;
+  border-bottom: 1px solid coral;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.botoes {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.botao-criar {
+  position: relative;
+  width: 40%;
+  height: 32px;
+  border-radius: 6px;
+  outline: 0;
+  border: none;
+  margin-left: 12px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(65, 235, 93);
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.botao-voltar {
+  position: relative;
+  width: 40%;
+  border-radius: 6px;
+  outline: 0;
+  border: none;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(255, 154, 59);
+  color: #075794;
+  cursor: pointer;
+}
+
+.botao-criar:active {
+  background-color: rgb(35, 180, 59);
+  color: white;
+}
+
+.botao-voltar:active {
+  background-color: rgb(207, 125, 48);
+}
+
+.botao-senha {
+  width: 130px;
+  height: 32px;
+  border-radius: 6px;
+  outline: 0;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(128, 194, 233);
+  color: whitesmoke;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid rgb(33, 235, 67);
+}
+
+.botao-senha:active {
+  background-color: rgb(48, 131, 170);
+}
+

@@ -1,0 +1,155 @@
+.main-criatopico{
+  height: 100%;
+  min-height: 743px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.criatop-form {
+  display: flex;
+  height: 87%;
+  padding: 10px 20px;
+  flex-direction: column;
+  background-color: #0686e7;
+  border-radius: 12px;
+}
+
+.input {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 22px;
+  margin-bottom: 24px;
+  width: 60%;
+  align-self: center;
+}
+
+.input h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  color: rgb(245, 238, 238);
+  margin-bottom: 12px;
+}
+
+.input input{
+  width: 100%;
+  padding: 6px 12px;
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+  font-style: italic;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input input::placeholder {
+  color: lightblue;
+  text-align: center;
+}
+
+.select-topico {
+  align-self: flex-end;
+}
+
+select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 180px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 4px;
+  outline: 0;
+  background-color: lightblue;
+  color: whitesmoke;
+  padding-left: 4px;
+  text-align-last: center;
+  border: none;
+}
+
+option{
+  color: whitesmoke;
+  font-weight: bold;
+  border: none;
+}
+
+
+.textarea {
+  text-align: center;
+  align-self: center;
+  width: 90%;
+}
+
+.textarea h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  color: rgb(245, 238, 238);
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 27px;
+}
+
+textarea {
+  width: 100%;
+  height: 420px;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  resize:none;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  overflow-y: hidden;
+}
+
+.botoes {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.botao-criar {
+  position: relative;
+  width: 40%;
+  height: 32px;
+  border-radius: 6px;
+  outline: 0;
+  border: none;
+  margin-left: 12px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(65, 235, 93);
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.botao-voltar {
+  position: relative;
+  width: 40%;
+  border-radius: 6px;
+  outline: 0;
+  border: none;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(255, 154, 59);
+  color: #075794;
+  cursor: pointer;
+}
+
+.botao-criar:active {
+  background-color: rgb(35, 180, 59);
+  color: white;
+}
+
+.botao-voltar:active {
+  background-color: rgb(207, 125, 48);
+}
+
+.vmessage {
+  text-align: center;
+}

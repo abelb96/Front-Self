@@ -1,0 +1,17 @@
+<main class="inicial" *ngIf='likes'>
+    <section   class="like limitar-container" *ngFor="let like of likes">
+      <div class="limitar-container2">
+            <div class="card-likes">
+
+                <div class="cards-likes">
+
+                    <div class="criado-por">Curtido por: <span routerLink='/forum/perfil/{{like.id_usuario}}'>{{like.nome}} {{like.sobrenome}}</span></div>
+
+                    <div class="data-criacao"><span>{{like.data}}</span></div>
+
+                </div>
+            </div>
+          </div>
+    </section>
+
+</main>

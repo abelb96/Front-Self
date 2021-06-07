@@ -1,0 +1,107 @@
+.main-criatopico{
+  height: 100%;
+  min-height: 680px;
+  display: flex;
+  flex-direction: column;
+}
+
+.criatop-form {
+  margin-top: 32px;
+  display: flex;
+  height: 36%;
+  padding: 10px 20px;
+  flex-direction: column;
+  background-color: #0686e7;
+  border-radius: 12px;
+}
+
+.textarea {
+  text-align: center;
+  align-self: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  color: rgb(245, 238, 238);
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 27px;
+}
+
+.textarea h3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  color: rgb(245, 238, 238);
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  resize:none;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  overflow-x: hidden;
+  line-height: 20px;
+}
+
+
+.botoes {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.botao-criar {
+  position: relative;
+  width: 40%;
+  height: 32px;
+  border-radius: 6px;
+  outline: 0;
+  border: none;
+  margin-left: 12px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(65, 235, 93);
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.botao-voltar {
+  position: relative;
+  width: 40%;
+  border-radius: 6px;
+  outline: 0;
+  border: none;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(255, 154, 59);
+  color: #075794;
+  cursor: pointer;
+}
+
+.botao-criar:active {
+  background-color: rgb(35, 180, 59);
+  color: white;
+}
+
+.botao-voltar:active {
+  background-color: rgb(207, 125, 48);
+}
+
+.vmessage {
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+.inicial {
+  display: flex;
+  flex-direction: column;
+  }
+
+  .titulo-inicial {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 8px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    padding-left: 230px;
+    color: whitesmoke;
+    background-color: coral;
+  }
+

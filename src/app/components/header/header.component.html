@@ -1,0 +1,19 @@
+<header class="cabeca">
+
+  <div class="cabeca-conteudo">
+      <div class="cabeca-logo-box">
+          <img src="../../../assets/logo/logo.png" alt="Logo" class="cabeca-logo">
+          <p class="cabeca-nome-empresa"><a routerLink=''>Self Storage</a></p>
+      </div>
+
+      <nav class="cabeca-links">
+          <a class="cabeca-link" [ngClass]="{ 'home' : home }" routerLink="">Home</a>
+          <a class="cabeca-link" [ngClass]="{ 'contato' : contato }" routerLink="/contato">Contato</a>
+          <a class="cabeca-link" [ngClass]="{ 'forum' : forum }" routerLink='/forum-login'>Forum</a>
+          <div class="dirwpp"><a href="https://api.whatsapp.com/send?1=pt_BR&phone=5561995942902&text=Olá,+tenho+interesse+em+saber+mais+sobre+você.+Está+disponível?" target="_blank" rel="noopener noreferrer"><img src="../../..//assets/icon/redes/wpp.png" alt="Wpp"></a></div>
+      </nav>
+  </div>
+
+
+</header>
+<ap-alert></ap-alert>

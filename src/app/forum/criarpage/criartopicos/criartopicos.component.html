@@ -1,0 +1,39 @@
+<main class="main-criatopico limitar-container">
+  <form #form="ngForm"  [formGroup]="criaTopico" (ngSubmit)="criatop();" class="criatop-form">
+
+    <div class="select-topico">
+      <select formControlName="categoria_id">
+        <option value=""  hidden>categorias</option>
+        <option *ngFor="let categoria of categorias"  value="{{categoria.id}}" >{{categoria.categoria}}</option>
+      </select>
+      <ap-vmessage *ngIf="criaTopico.get('categoria_id').errors?.required && form.submitted" text="*O campo categoria é obrigatório!"></ap-vmessage>
+    </div>
+
+      <div class="input">
+        <h2>Título do Topico</h2>
+        <input formControlName="titulo" type="text" placeholder="Digite o título aqui">
+        <ap-vmessage *ngIf="criaTopico.get('titulo').errors?.required && (form.submitted || criaTopico.get('titulo').touched)" text="*O campo Título é obrigatório!"></ap-vmessage>
+        <ap-vmessage *ngIf="criaTopico.get('titulo').errors?.minlength && criaTopico.get('titulo').touched" text="*mínimo de caracter: 6 caracteres"></ap-vmessage>
+        <ap-vmessage *ngIf="criaTopico.get('titulo').errors?.maxlength" text="*limite de caracter: 24 caracteres"></ap-vmessage>
+      </div>
+
+
+
+
+      <div class="textarea">
+        <h2>Descrição</h2>
+        <textarea formControlName="conteudo" placeholder="Descrição..."></textarea>
+        <ap-vmessage *ngIf="criaTopico.get('conteudo').errors?.required && (form.submitted || criaTopico.get('conteudo').touched)" text="*O campo Título é obrigatório!"></ap-vmessage>
+        <ap-vmessage *ngIf="criaTopico.get('conteudo').errors?.minlength && criaTopico.get('conteudo').touched" text="*mínimo de caracter: 124 caracteres"></ap-vmessage>
+        <ap-vmessage *ngIf="criaTopico.get('conteudo').errors?.maxlength" text="*limite de caracter: 660 caracteres"></ap-vmessage>
+      </div>
+
+
+
+      <div class="botoes">
+        <button class="botao-criar" type="submit">Criar</button>
+        <button class="botao-voltar" botaovoltar>Voltar</button>
+      </div>
+
+  </form>
+</main>

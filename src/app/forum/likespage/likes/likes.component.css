@@ -1,0 +1,73 @@
+.like{
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 1px solid #f4f4f4;
+  background-color:white;
+}
+
+.like:last-child{
+  margin-bottom: 32px;
+}
+
+
+.like:hover {
+  border: 1px solid #0191ff;
+  box-shadow: 2px 2px 2px 2px #0191ff;
+}
+
+.card-likes {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 16px;
+  padding-bottom: 8px;
+}
+
+.cards-likes {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.criado-por {
+  margin-right: 2px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.criado-por span {
+  font-style: italic;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #37ebf8;
+  margin-left: 6px;
+}
+
+.data-criacao {
+  font-size: 18px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.data-criacao span {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+/*cores brancas boas:
+#faf9f8
+
+*/

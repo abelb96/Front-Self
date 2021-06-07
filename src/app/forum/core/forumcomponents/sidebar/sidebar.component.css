@@ -1,0 +1,86 @@
+.icone-menu {
+  top: 62px;
+  position: absolute;
+  left: 0;
+  color: white;
+  font-size: 46px;
+  cursor: pointer;
+}
+
+.menu-bar {
+  position:  fixed;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 120px;
+  margin: 0;
+  padding: 1em;
+  background: white;
+  border-radius: 0px 20px 20px 0px;
+  top: 20%;
+  left: -90%;
+  transition: left 0.5s ease-out;
+  z-index: 1;
+}
+
+
+.active-menu .menu-bar {
+  left: 0;
+}
+
+.active-menu .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.cards-side{
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  margin-bottom: 8px;
+  margin-left: -12px;
+  border-bottom: 2px solid lightblue;
+}
+
+.cards-side:last-child {
+  margin-bottom: 0;
+}
+
+.menu-criar {
+  margin-bottom: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: orange;
+}
+
+.menu-criar:active{
+  background-color: rgb(255, 136, 0);
+}
+
+.menu-criar span {
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.menu-criar i {
+  font-size: 32px;
+  color: white;
+}
+
+.ver-tops {
+  display: none;
+}
+
+.criar-top {
+  display: none;
+}

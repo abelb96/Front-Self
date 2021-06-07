@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+  <main class="page">
+
+    <section class="box-form limitar-container">
+      <form #form="ngForm"  [formGroup]="esqueciForm" class="form" (ngSubmit)='esqueci();'>
+          <div class="header">
+            <h2>Esqueceu a senha?</h2>
+          </div>
+
+        <div class="fields">
+
+            <div class="item">
+                <div>
+                  <h3>Email</h3>
+                </div>
+
+                <div class="input">
+                    <input formControlName="email" type="email" name="email" required placeholder="Digite o email cadastrado">
+                    <ap-vmessage text="*Esse Email não existe" *ngIf="esqueciForm.get('email').errors?.emailNaoExiste"></ap-vmessage>
+                    <ap-vmessage *ngIf="esqueciForm.get('email').errors?.required && (form.submitted || esqueciForm.get('email').touched)" text="*O campo email é obrigatório"></ap-vmessage>
+                    <ap-vmessage *ngIf="esqueciForm.get('email').errors?.email && (form.submitted || esqueciForm.get('email').touched)" text="*Email inválido!"></ap-vmessage>
+                    <ap-vmessage *ngIf="esqueciForm.get('email').errors?.lowerCase" text="*apenas letras minúsculas"></ap-vmessage>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="button" type="submit">Recuperar Senha</button>
+      </form>
+    </section>
+
+  </main>
+
+<app-footer></app-footer>

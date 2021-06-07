@@ -1,0 +1,43 @@
+footer {
+  margin: 0 auto;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B3675;
+  width: 100%;
+  margin-top: auto;
+}
+
+.rodape p {
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  text-shadow: 0 0 2px white;
+}
+
+.rodape a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+.rodape div:first-child{
+  margin-top: 6px;
+}
+
+.rodape div:last-child {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 600px) {
+  .rodape a {
+    font-size: 13px;
+  }
+}

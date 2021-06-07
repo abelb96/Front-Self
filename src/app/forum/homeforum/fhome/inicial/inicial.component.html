@@ -1,0 +1,77 @@
+<main class="inicial">
+  <form class="pesquisar">
+    <input class='campo-pesquisar' type="search" [formControl]="campo" placeholder="Pesquise Topicos por Título ou Categoria">
+    <button id="pes" class="botao-pesquisar"><i aria-hidden="true" class="fa fa-search pesquisar-icone"></i></button>
+  </form>
+
+  <div *ngIf='pesquisa; else top'>
+    <section *ngFor="let topico of pesquisa"  class="topico limitar-container">
+      <div class="limitar-container2">
+            <div class="card-topico">
+
+                <div class="cards-topicos">
+
+                    <div class="criado-por">Criado por: <span (click)='perfil(topico.id_usuario);'>{{topico.criado_por}}</span></div>
+
+                    <div class="data-criacao">Data de Criação: <span>{{topico.data}}</span></div>
+
+                    <div class="titulo-topico" routerLink="/forum/topico/{{topico.id_topico}}"><h2>{{topico.titulo}}</h2></div>
+
+                    <div class="conteudo-topico">
+                      <p>{{topico.conteudo}}</p>
+                    </div>
+
+                    <div class ="categoria-topico">
+                        <span>{{topico.categoria}}</span>
+                        <span>{{topico.total_respostas}}</span>
+                        <span routerLink="/forum/topico/{{topico.id_topico}}">Respostas.</span>
+                    </div>
+
+                    <form class="curtir-topico">
+                      <span>{{topico.likes}}</span>
+                      <span routerLink="/forum/curtidas-topico/{{topico.id_topico}}">Curtidas</span>
+                    </form>
+                </div>
+            </div>
+          </div>
+    </section>
+  </div>
+
+  <ng-template #top>
+    <section *ngFor="let topico of topicos"  class="topico limitar-container">
+      <div class="limitar-container2">
+            <div class="card-topico">
+
+                <div class="cards-topicos">
+
+                    <div class="criado-por">Criado por: <span (click)='perfil(topico.id_usuario);'>{{topico.criado_por}}</span></div>
+
+                    <div class="data-criacao">Data de Criação: <span>{{topico.data}}</span></div>
+
+                    <div class="titulo-topico" routerLink="/forum/topico/{{topico.id_topico}}"><h2>{{topico.titulo}}</h2></div>
+
+                    <div class="conteudo-topico">
+                      <p>{{topico.conteudo}}</p>
+                    </div>
+
+                    <div class ="categoria-topico">
+                        <span>{{topico.categoria}}</span>
+                        <span>{{topico.total_respostas}}</span>
+                        <span routerLink="/forum/topico/{{topico.id_topico}}">Respostas.</span>
+                    </div>
+
+                    <form class="curtir-topico">
+                      <span>{{topico.likes}}</span>
+                      <span routerLink="/forum/curtidas-topico/{{topico.id_topico}}">Curtidas</span>
+                    </form>
+                </div>
+            </div>
+          </div>
+    </section>
+
+    <div *ngIf="topicos" class="box-subir">
+      <button *ngIf="topicos.length > 4" class="subir" (click)='subir();'>Subir</button>
+    </div>
+  </ng-template>
+
+</main>

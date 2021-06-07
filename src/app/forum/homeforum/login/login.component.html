@@ -1,0 +1,38 @@
+<app-header></app-header>
+  <main class="login-apresentacao" id="login-apresentacao">
+    <section class="limitar-container">
+            <div class="login-formulario">
+                <div class="engloba-Login">
+
+                  <div class="topo-formLogin">
+                          <h3>Login Forum</h3>
+                          <hr>
+                  </div>
+
+                <form [formGroup]='loginForm' class="formulario-login" (ngSubmit)="login();">
+
+                      <div class="item">
+                          <div>
+                              <input #userNameInput formControlName="email" type="email" placeholder="Email" autofocus>
+
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div>
+                              <input formControlName="senha" type="password"  placeholder="Digite sua senha">
+
+                          </div>
+                      </div>
+                      <button class="botao" type="submit">Entrar</button>
+                </form>
+
+                <div class="box-opt">
+                  <a class="esqueci" routerLink='/forum-esqueci'>Esqueci a senha</a>
+                  <a class="cadastrar" routerLink='/forum-cadastro'>Cadastrar</a>
+                </div>
+
+              </div>
+            </div>
+    </section>
+  </main>
+<app-footer></app-footer>

@@ -1,0 +1,128 @@
+.cabeca {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.cabeca-conteudo {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.cabeca-logo-box {
+  display: flex;
+  align-items: center;
+}
+
+.cabeca-logo {
+  width: 42px;
+  height: 59px;
+  object-fit: contain;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+.cabeca-nome-empresa,
+.cabeca-nome-empresa a {
+  color: rgb(255, 136, 0);
+  font-size: 28px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 26px;
+}
+
+.cabeca-nome-empresa a {
+  margin-right: 6px
+}
+
+.cabeca-link {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 0px 15px 10px 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.cabeca-links a.active {
+  color: #2354c7;
+}
+
+.dirwpp {
+  position: fixed;
+  right: 6px;
+  bottom: 5px;
+}
+
+.dirwpp img {
+  border-radius: 26px;
+  width: 60px;
+  height: 60px;
+}
+
+.fixed-top {
+  position: fixed;
+}
+
+.forum {
+  display: none;
+}
+
+.contato{
+  display: none;
+}
+
+.home {
+  display: none;
+}
+
+  @media (max-width: 800px) {
+    .cabeca-conteudo {
+        padding: 0 4px;
+    }
+    .dirwpp {
+      right: 2px;
+    }
+    .dirwpp img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabeca-links {
+        margin: 0 auto;
+    }
+
+    .cabeca-links a {
+      font-size: 16px;
+      margin: 0 -10px;
+    }
+
+    .cabeca-logo-box {
+      margin-right: -48px;
+    }
+    .cabeca-nome-empresa {
+          display: none;
+    }
+
+    .dirwpp {
+      top: 10px;
+      right: 8px;
+    }
+    .dirwpp img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+

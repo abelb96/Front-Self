@@ -1,0 +1,43 @@
+<i class="material-icons-outlined icone-menu" (click)="toggle()">
+  menu
+</i>
+<div [ngClass]="{ 'active-menu' : isShown }">
+  <div class="menu-bar">
+    <div class="menu-side" onselectstart="return false">
+
+        <div [ngClass]="{ 'criar-top' : criarTop }" class="cards-side">
+            <div class="menu-criar" routerLink="/forum/cria-topico">
+              <i class="material-icons-outlined">
+                add_circle_outline
+              </i>
+              <span>Criar Tópico</span>
+            </div>
+        </div>
+
+        <div [ngClass]="{ 'ver-tops' : verTops }" class="cards-side ver-top">
+            <div class="menu-criar" (click)='init();'>
+              <i class="material-icons-outlined">
+                visibility
+              </i>
+              <span>Ver Tópicos</span>
+            </div>
+        </div>
+
+        <div *ngIf="admin == 1 || admin == 6" class="menu-side" onselectstart="return false">
+
+            <div [ngClass]="{'ver-admins' : verAdmins }" class="cards-side ver-admin">
+              <div class="menu-criar">
+                <i class="material-icons-outlined">
+                  visibility
+                </i>
+                <span>Ver Admins</span>
+              </div>
+            </div>
+
+        </div>
+
+
+    </div>
+  </div>
+  <div class="overlay" (click)="toggle()"></div>
+</div>

@@ -1,0 +1,102 @@
+.boxfoto-fhome {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+}
+
+.nome-usuario {
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.nome-usuario h2 {
+ font-weight: normal;
+ font-style: italic;
+ color: white;
+ font-size: 22px;
+ text-decoration: underline;
+}
+
+.menu-baruser {
+  position:  fixed;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px 12px 16px 12px;
+  background: white;
+  border-radius: 8px 0px 0px 8px;
+  top: 6%;
+  right: -90%;
+  transition: right 0.5s ease-out;
+  z-index: 1;
+}
+
+
+.active-siduser .menu-baruser {
+  right: 0;
+}
+
+.active-siduser .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+
+
+.box-sideusermenu {
+  text-align: center;
+  border-bottom: 1px solid lightblue;
+  margin-bottom: 12px;
+}
+
+.box-sideusermenu:first-child {
+  margin-top: -4px;
+}
+
+.box-sideusermenu:last-child {
+  border-bottom: none;
+}
+
+.box-sideusermenu a {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: #0078d6;
+  cursor: pointer;
+}
+
+.box-sideusermenu a:hover {
+  color: #046ab8;
+}
+
+.box-sideusermenu a:active {
+  color: #45a7f1;
+}
+
+.logout {
+  margin-bottom: -16px;
+}
+
+.logout > a {
+  color: orange;
+}
+
+.logout > a:hover {
+  color: rgb(241, 159, 6);
+}
+
+.logout > a:active {
+  color: rgb(241, 174, 50);
+}
+
+

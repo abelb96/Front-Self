@@ -1,0 +1,73 @@
+<app-header></app-header>
+  <main class="login-apresentacao">
+
+    <div class="topo-form limitar-container">
+        <div class="formtexto">
+            <h3>Formulário de Cadastro</h3>
+        </div>
+      <form #form="ngForm"  [formGroup]="cadastroForm" class="formularioCadastro" (submit)="cadastro();">
+            <div class="item1">
+              <div>
+                <input formControlName="nome" type="text" nome="Nome" placeholder="Nome" required>
+              </div>
+                <ap-vmessage *ngIf="cadastroForm.get('nome').errors?.required && (form.submitted || cadastroForm.get('nome').touched)" text="*O campo nome é obrigatório"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.get('nome').errors?.name" text="*mínimo de caracter: 3 caracteres"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.get('nome').errors?.minlength && (form.submitted || cadastroForm.get('nome').touched)" text="*mínimo de caracter: 3 caracteres"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.get('nome').errors?.maxlength && (form.submitted || cadastroForm.get('nome').touched)" text="*limite de caracter: 10 caracteres"></ap-vmessage>
+            </div>
+
+            <div class="item1">
+              <div>
+                  <input formControlName="sobrenome" type="text" nome="sobrenome" placeholder="Sobrenome" required>
+              </div>
+                <ap-vmessage *ngIf="cadastroForm.get('sobrenome').errors?.required && form.submitted" text="*O campo sobrenome é obrigatório"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.get('sobrenome').errors?.minlength && (form.submitted || cadastroForm.get('sobrenome').touched)" text="*mínimo de caracter: 3 caracteres"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.get('sobrenome').errors?.maxlength && (form.submitted || cadastroForm.get('sobrenome').touched)" text="*limite de caracter: 10 caracteres"></ap-vmessage>
+            </div>
+
+            <div class="item1">
+              <div>
+                  <input type="tel" formControlName="telefone" nome="Telefone" placeholder="Telefone com DDD" mask="(00) 00000-0000"/>
+              </div>
+                <ap-vmessage *ngIf="cadastroForm.get('telefone').errors?.required && (form.submitted || cadastroForm.get('telefone').touched)" text="*O campo telefone é obrigatório"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.get('telefone').errors?.minlength && (form.submitted || cadastroForm.get('telefone').touched)" text="*mínimo de númeoros: 10 números"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.get('telefone').errors?.maxlength && (form.submitted || cadastroForm.get('telefone').touched)" text="*limite de números: 11 números"></ap-vmessage>
+            </div>
+
+            <div class="item1">
+              <div>
+                <input formControlName="email"  name="email" placeholder="Email">
+              </div>
+              <ap-vmessage text="Esse Email já existe" *ngIf="cadastroForm.get('email').errors?.emailTaken"></ap-vmessage>
+              <small *ngIf="cadastroForm.get('email').valid" class="text-success">Email Disponível</small>
+              <ap-vmessage *ngIf="cadastroForm.get('email').errors?.required && (form.submitted || cadastroForm.get('email').touched)" text="*O campo email é obrigatório"></ap-vmessage>
+              <ap-vmessage *ngIf="cadastroForm.get('email').errors?.email && (form.submitted || cadastroForm.get('email').touched)" text="*Email inválido!"></ap-vmessage>
+              <ap-vmessage *ngIf="cadastroForm.get('email').errors?.lowerCase" text="*apenas letras minúsculas"></ap-vmessage>
+            </div>
+
+            <div class="item1">
+              <div>
+                <input formControlName="senha" type="password" name="senha" placeholder="Senha">
+              </div>
+                <ap-vmessage *ngIf="cadastroForm.get('senha').errors?.required && (form.submitted || cadastroForm.get('senha').touched)" text="*O campo senha é obrigatório"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.get('senha').errors?.minlength && (form.submitted || cadastroForm.get('senha').touched)" text="*mínimo de caracter: 8 caracteres"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.get('senha').errors?.maxlength && (form.submitted || cadastroForm.get('senha').touched)" text="*limite de caracter: 16 caracteres"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.get('senha').errors?.senhaForte && (form.submitted || cadastroForm.get('senha').touched)" text="*Ao menos 1 letra maiúscula e caracter especial"></ap-vmessage>
+                <ap-vmessage *ngIf="cadastroForm.errors?.emailPassword && form.submitted" text="Email e Senha devem ser diferentes."></ap-vmessage>
+              </div>
+
+            <div class="item1">
+              <div>
+                <input formControlName="confirmaSenha" type="password" name="confirmaSenha" placeholder="Confirme Sua Senha">
+              </div>
+              <ap-vmessage *ngIf="cadastroForm.get('confirmaSenha').errors?.required && (form.submitted || cadastroForm.get('confirmaSenha').touched)" text="*O campo confirma senha é obrigatório"></ap-vmessage>
+              <ap-vmessage *ngIf="cadastroForm.errors?.confirmaPass && cadastroForm.get('confirmaSenha').touched" text="As senhas estão diferentes!"></ap-vmessage>
+            </div>
+            <button class="botaocadastro" type="submit" >Cadastrar</button>
+            <button class="botaovoltar" type="submit" routerLink='/forum-login'>Voltar</button>
+      </form>
+
+    </div>
+
+  </main>
+<app-footer></app-footer>

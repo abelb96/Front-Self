@@ -1,0 +1,42 @@
+<form class="form-perfil limitar-container" *ngFor="let perfi of perfil">
+
+
+  <div class="limitar-container glob">
+
+    <div class="item">
+        <div><h2>Nome</h2></div>
+        <div class="input">
+            <p>{{perfi.nome}}</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div><h2>Sobrenome</h2></div>
+        <div class="input">
+            <p>{{perfi.sobrenome}}</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div><h2>Telefone</h2></div>
+        <div class="input">
+            <p>{{perfi.telefone}}</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div><h2>Email</h2></div>
+        <div class="input">
+            <p>{{perfi.email}}</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <div><h2>Criado em</h2></div>
+        <div class="input">
+          <p>{{perfi.data_criacao}}</p>
+        </div>
+    </div>
+
+  </div>
+</form>

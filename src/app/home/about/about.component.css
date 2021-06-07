@@ -1,0 +1,105 @@
+.about {
+  width: 100%;
+  background-color: rgb(245, 244, 244);
+}
+
+.about h3 {
+  margin-top: 20px;
+}
+
+.about h2,
+h3 {
+  color: #1B3675;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 33px;
+  font-family: sans-serif;
+}
+
+.about .para {
+  margin-top: 16px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  color: #111111;
+  border-bottom: 1px solid rgba(85, 85, 85, 0.1);
+}
+
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 16px;
+  padding-bottom: 8px;
+}
+
+.cards {
+  box-shadow: 0 0 3px black;
+  background-color: rgba(27, 57, 117, 0.9);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid black;
+  width: calc(100%/3 - 20px);
+  margin: 5px;
+}
+
+.cards div:first-child {
+  margin-top: 8px;
+}
+
+.block-img {
+  height: 120px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.block-titulo {
+  margin: 10px 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(163, 163, 163, 0.1);
+}
+
+.block-info {
+  color: rgb(212, 212, 86);
+  margin: 8px 8px 12px 8px;
+  text-align: center;
+  font-family: sans;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  font-style: italic;
+  font-weight: bold;;
+}
+
+.block-info a {
+  text-decoration: none;
+  border-bottom: 2px solid;
+  color: rgba(253, 136, 0, 0.8);
+  transition: all 200ms;
+}
+
+.block-info a:hover {
+  color: rgb(255, 136, 0);
+}
+
+@media (max-width: 800px) {
+  .cards {
+    width: 100%;
+  }
+  .cards:last-child {
+    margin-bottom: 16px;
+  }
+}
