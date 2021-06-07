@@ -16,3 +16,6 @@ Atualizações com futuros commits na V1.1:
 #interface Dono do site: Terá opções a mais no menu em tela, como: Ver logs dos usuários e admins, modificar usuário para admin, banir admin e etc.
 
 #integração da landing page com sistema: Integrar landing page com o Back-End...
+
+
+Atenção: esse projeto foi feito para ter integração absoluta com o outro projeto, o projeto Back-End Self Storage. Para que ele funcione perfeitamente, providencie o outro também...
