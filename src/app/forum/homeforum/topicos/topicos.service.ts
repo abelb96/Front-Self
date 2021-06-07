@@ -67,5 +67,9 @@ export class TopicosService {
     PegaListaLikes(topicoId) {
       return this.http.get(API + `/lista/likes-topico/${topicoId}`)
     }
+
+    excluiRes(idRes) {
+      return this.http.delete(API + `/deleta-resposta/${idRes}`)
+    }
 }
 

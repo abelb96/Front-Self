@@ -10,6 +10,10 @@
 
                 <div class="criado-porT">Criado por: <span (click)='perfil(topico.id_usuario);'>{{topico.criado_por}}</span></div>
 
+                <div class="botao-excluir" *ngIf="(user$ | async) as user;">
+                  <button class="excluir" (click)="excluirTop(topico.topico_id);" *ngIf="user.admin >= 1">Excluir Tópico</button>
+                </div>
+
                 <div class="span">
                   <span class="categoria">{{topico.categoria}}</span>
                 </div>
@@ -41,6 +45,10 @@
               <div class="cards-resposta">
                   <div class="card-component">
                     <div class="criado-por">Respondido por: <span routerLink="/forum/perfil/{{resposta.usuario_id}}">{{resposta.usuario}}</span></div>
+
+                    <div class="botao-excluir" *ngIf="(user$ | async) as user;">
+                      <button class="excluir" (click)='excluirRes(resposta.resposta_id)' *ngIf="user.admin >= 1">Excluir Resposta</button>
+                    </div>
 
                     <div class="data-criacao">Data de Resposta: <span>{{resposta.data}}</span></div>
 
