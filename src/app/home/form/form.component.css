@@ -71,6 +71,7 @@ main {
 .engloba {
   display: flex;
   flex-flow: column wrap;
+  width: 42%;
 }
 
 .topo-form {
@@ -114,6 +115,19 @@ main {
   font-family: sans-serif;
   color: rgb(224, 222, 222);
   font-style: italic;
+}
+
+.gif {
+  width: 26px;
+  height: 26px;
+  margin: -5px;
+  margin-left: 10px;
+  justify-content: center;
+  display: none;
+}
+
+.sim {
+  display: inline-block;
 }
 
 input {

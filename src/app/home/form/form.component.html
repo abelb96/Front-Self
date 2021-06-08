@@ -15,32 +15,40 @@
                         <h3>O que você quer guardar?</h3>
                     </div>
 
-            <form id="form" name="form" class="formulario-home" action="/home"  method="POST">
+            <form #form="ngForm"  [formGroup]="landingForm" name="form" class="formulario-home" (ngSubmit)='Enviar();'>
 
                     <div class="item">
                         <div>
-                            <input id="nome" type="text" name="nome" placeholder="Nome" required>
+                            <input formControlName="nome"  type="text" name="nome" placeholder="Nome" required>
                         </div>
                     </div>
+                        <ap-vmessage *ngIf="landingForm.get('nome').errors?.required && (form.submitted || landingForm.get('nome').touched)" text="*O campo nome é obrigatório"></ap-vmessage>
+                        <ap-vmessage *ngIf="landingForm.get('nome').errors?.minlength && (form.submitted || landingForm.get('nome').touched)" text="*mínimo de caracter: 3 caracteres"></ap-vmessage>
+                        <ap-vmessage *ngIf="landingForm.get('nome').errors?.maxlength && (form.submitted || landingForm.get('nome').touched)" text="*limite de caracter: 10 caracteres"></ap-vmessage>
 
                     <div class="item">
                         <div>
-                            <input id=email type="email" name="email" placeholder="Email">
+                            <input formControlName="email" type="email" name="email" placeholder="Email">
                         </div>
                     </div>
+                        <ap-vmessage *ngIf="landingForm.get('email').errors?.required && (form.submitted || landingForm.get('email').touched)" text="*O campo email é obrigatório"></ap-vmessage>
+                        <ap-vmessage *ngIf="landingForm.get('email').errors?.email && (form.submitted || landingForm.get('email').touched)" text="*Email inválido!"></ap-vmessage>
 
                     <div class="item">
                         <div>
-                            <input id="telefone" type="tel" name="telefone"  placeholder="Telefone com DDD" pattern="[ 0-9()#&+-=.]+" title="Apenas números e caracteres de telefone ( - , () , . , etc) serão aceitos">
+                            <input formControlName="telefone" type="tel" name="telefone"  placeholder="Telefone com DDD" mask='(00) 00000-0000'>
                         </div>
                     </div>
+                      <ap-vmessage *ngIf="landingForm.get('telefone').errors?.required && (form.submitted || landingForm.get('telefone').touched)" text="*O campo telefone é obrigatório"></ap-vmessage>
+                      <ap-vmessage *ngIf="landingForm.get('telefone').errors?.minlength && (form.submitted || landingForm.get('telefone').touched)" text="*mínimo de númeoros: 10 números"></ap-vmessage>
+                      <ap-vmessage *ngIf="landingForm.get('telefone').errors?.maxlength && (form.submitted || landingForm.get('telefone').touched)" text="*limite de números: 11 números"></ap-vmessage>
 
                     <div class="item">
                         <div class="fala"><h3>Box de interesse:</h3></div>
                         <div>
-                            <select class="metro" id="metragem" name="metro">
-                                <option value="" id="valor">Selecione um Tipo...</option>
-                                <option class="maleiro" value="Maleiro">
+                            <select formControlName="metro" class="metro" name="metro">
+                                <option  hidden value="">Selecione um Tipo...</option>
+                                <option value="Maleiro">
                                 Maleiro
                                 </option>"
                                 <option value="Pequeno">
@@ -59,35 +67,17 @@
                                 Outros...
                                 </option>
                             </select>
+                            <ap-vmessage *ngIf="landingForm.get('metro').errors?.required && form.submitted" text="*O campo tipo é obrigatório!"></ap-vmessage>
                         </div>
                     </div>
 
                     <div class="item">
-                        <div class="fala"><h3>Melhor horário para entrar em contato:</h3></div>
                             <div>
-                                <select id="hora" name="hora">
-
-                                    <option value="">Selecione um horário...</option>
-
-
-                                    <!--{% for hora in horas %}
-
-                                    {% if hora.valor == '' %}
-
-                                     {% else %}
-                                    <option value="{{hora.valor}}">
-                                        {{hora.valor}}
-                                    </option>"
-                                        {%endif%}
-
-                                    {% endfor %}-->
-                                </select>
-
-                                <textarea id="msg" name="msg" cols="30" rows="8" placeholder="Mensagem (opcional)"></textarea>
-
+                                <textarea formControlName="msg" name="msg" cols="30" rows="8" placeholder="Mensagem (opcional)"></textarea>
                             </div>
                     </div>
-                    <button id="botao" type="submit">Enviar</button>
+
+                    <button id="botao" type="submit">Enviar<img class="gif" [ngClass]="{'sim' : gif}" src="assets/gif/carregando1.gif" alt="gif"></button>
             </form>
 
             </div>

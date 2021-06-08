@@ -27,6 +27,10 @@ export class UserService{
 
   }
 
+  EnviaForm(form) {
+    return this.http.post(API + '/landing', form)
+  }
+
   setToken(token: string) {
     this.tokenService.setToken(token);
     this.decodeAndNotify();

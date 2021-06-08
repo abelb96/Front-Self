@@ -11,7 +11,6 @@
                 <input formControlName="nome" type="text" nome="Nome" placeholder="Nome" required>
               </div>
                 <ap-vmessage *ngIf="cadastroForm.get('nome').errors?.required && (form.submitted || cadastroForm.get('nome').touched)" text="*O campo nome é obrigatório"></ap-vmessage>
-                <ap-vmessage *ngIf="cadastroForm.get('nome').errors?.name" text="*mínimo de caracter: 3 caracteres"></ap-vmessage>
                 <ap-vmessage *ngIf="cadastroForm.get('nome').errors?.minlength && (form.submitted || cadastroForm.get('nome').touched)" text="*mínimo de caracter: 3 caracteres"></ap-vmessage>
                 <ap-vmessage *ngIf="cadastroForm.get('nome').errors?.maxlength && (form.submitted || cadastroForm.get('nome').touched)" text="*limite de caracter: 10 caracteres"></ap-vmessage>
             </div>
