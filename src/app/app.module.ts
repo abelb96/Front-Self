@@ -1,3 +1,4 @@
+import { UsersPageModule } from './forum/userspage/userspage.module';
 import { MeuPerfilPageModule } from './forum/meuperfilpage/meuperfilpage.module';
 import { ResPageModule } from './forum/respage/respage.module';
 import { ComResPageModule } from './forum/comrespage/comrespage.module';
@@ -46,7 +47,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     MeuPerfilPageModule,
     MyTopPageModule,
     LikesPageModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    UsersPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

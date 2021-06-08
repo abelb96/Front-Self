@@ -69,7 +69,11 @@ export class TopicosService {
     }
 
     excluiRes(idRes) {
-      return this.http.delete(API + `/deleta-resposta/${idRes}`)
+      return this.http.delete(API + `/admin/deleta-res/${idRes}`)
+    }
+
+    excluiTop(idTop) {
+      return this.http.delete(API + `/admin/deleta-top/${idTop}`)
     }
 }
 

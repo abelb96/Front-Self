@@ -25,12 +25,12 @@
 
         <div *ngIf="admin == 1 || admin == 6" class="menu-side" onselectstart="return false">
 
-            <div [ngClass]="{'ver-admins' : verAdmins }" class="cards-side ver-admin">
+            <div [ngClass]="{'todos-users' : todosUsers }" class="cards-side ver-admin" routerLink='/forum/usuarios'>
               <div class="menu-criar">
                 <i class="material-icons-outlined">
                   visibility
                 </i>
-                <span>Ver Admins</span>
+                <span>Usuarios</span>
               </div>
             </div>
 

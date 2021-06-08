@@ -28,7 +28,7 @@ export class TopResComponent implements OnInit {
     this.topicoService.Topico(this.idTopico).forEach(data => {
       if(data == 0) return this.router.navigateByUrl('forum/')
       this.topico = data[0]
-      console.log(this.topico)
+
     })
 
     this.topicoService.Respostas(this.idTopico).forEach(data => {
@@ -60,10 +60,17 @@ export class TopResComponent implements OnInit {
 
   excluirRes(idRes) {
     this.topicoService.excluiRes(idRes).subscribe(res => {
-      this.alertService.success('Resposta Excluída com sucesso!', true);
+      this.alertService.success('Resposta excluída com sucesso!', true);
       this.topicoService.Respostas(this.idTopico).forEach(data => {
         this.respostas = data
       })
+    })
+  }
+
+  excluirTop(idTop) {
+    this.topicoService.excluiTop(idTop).subscribe(res => {
+      this.alertService.success('Tópico excluído com sucesso!', true);
+      setTimeout(() => this.router.navigateByUrl('/forum'), 3000);
     })
   }
 }

@@ -1,0 +1,77 @@
+<main class="inicial">
+  <form class="pesquisar">
+    <input class='campo-pesquisar' type="search" [formControl]="campo" placeholder="Pesquise usuarios por nome ou email">
+    <button id="pes" class="botao-pesquisar"><i aria-hidden="true" class="fa fa-search pesquisar-icone"></i></button>
+  </form>
+
+  <div *ngIf='pesquisa; else top'>
+    <section *ngFor="let usuario of pesquisa"  class="topico limitar-container">
+      <div class="limitar-container2">
+            <div class="card-users">
+
+                <div class="cards-users">
+
+                    <div class="nome">Nome: <span (click)='perfil(usuario.id);'>{{usuario.nome}} {{usuario.sobrenome}}</span></div>
+
+                    <div class="data-criacao">Data de Criação: <span>{{usuario.data_criacao}}</span></div>
+
+                    <div class="email-users"><h2>{{usuario.email}}</h2></div>
+
+                    <p *ngIf="usuario.admin >= 1" class="admin">Administrador</p>
+
+                    <button class="ver-logs">Ver logs</button>
+                    <button class="banir">Banir Conta</button>
+
+                    <div class ="categoria-telefone">
+                        <span>Telefone:</span>
+                        <span>{{usuario.telefone}}</span>
+                    </div>
+
+                    <div class="topicos">
+                      <span>{{usuario.total_topicos}}</span>
+                      <span>Topicos</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </section>
+  </div>
+
+  <ng-template #top>
+    <section *ngFor="let usuario of usuarios"  class="users limitar-container">
+      <div class="limitar-container2">
+            <div class="card-users">
+
+                <div class="cards-users">
+
+                    <div class="nome">Nome: <span (click)='perfil(usuario.id);'>{{usuario.nome}} {{usuario.sobrenome}}</span></div>
+
+                    <div class="data-criacao">Data de Criação: <span>{{usuario.data_criacao}}</span></div>
+
+                    <div class="email-users"><h2>{{usuario.email}}</h2></div>
+
+                    <p *ngIf="usuario.admin >= 1" class="admin">Administrador</p>
+
+                    <button class="ver-logs">Ver logs</button>
+                    <button class="banir">Banir Conta</button>
+
+                    <div class ="categoria-telefone">
+                        <span>Telefone:</span>
+                        <span>{{usuario.telefone}}</span>
+                    </div>
+
+                    <div class="topicos">
+                      <span>{{usuario.total_topicos}}</span>
+                      <span>Topicos</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </section>
+
+    <div *ngIf="usuarios" class="box-subir">
+      <button *ngIf="usuarios.length > 4" class="subir" (click)='subir();'>Subir</button>
+    </div>
+  </ng-template>
+
+</main>

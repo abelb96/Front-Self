@@ -13,7 +13,7 @@ export class SideBarComponent implements OnInit{
   isShown:boolean = false;
   criarTop:boolean = false;
   verTops:boolean = false;
-  verAdmins:boolean = false;
+  todosUsers:boolean = false;
   @Input() admin: number;
   @Input() email: number;
   @Input() nome: string;

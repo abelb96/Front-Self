@@ -89,4 +89,8 @@ export class UserService{
   edita(userId, usuario) {
     return this.http.put(API + `/usuario/edita-perfil/${userId}`, usuario)
   }
+
+  getUsers() {
+    return this.http.get(API + `/lista/users`)
+  }
 }

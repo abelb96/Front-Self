@@ -16,6 +16,7 @@ import { ContatoPagComponent } from './contato/contatopag.component';
 import { FhomeComponent } from './forum/homeforum/fhome/fhome.component';
 import { LikesPageComponent } from './forum/likespage/likespage.component';
 import { MudaSenhaComponent } from './forum/homeforum/muda-senha/muda-senha.component';
+import { UsersPageComponent } from './forum/userspage/userspage.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, data: {title: 'Home'}},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'forum-esqueci', canActivate: [LoginGuard], component: EsqueciComponent, data: {title: 'Esqueci'}},
   {path: 'forum/cria-topico',  canActivate: [AuthGuard], component: CriarPageComponent, data: {title: 'Criar Tópico'}},
   {path: 'forum/meus-topicos', canActivate: [AuthGuard], component: MyTopPageComponent, data: {title: 'Meus Tópicos'}},
+  {path: 'forum/usuarios', canActivate: [AuthGuard], component: UsersPageComponent, data: {title: 'Usuarios'}},
   {path: 'forum/:userName', canActivate: [AuthGuard], component: FhomeComponent, data: {title: 'Topicos'}},
   {path: 'forum/perfil/:id', canActivate: [AuthGuard], component: PerfilPageComponent, data: {title: 'Perfil'}},
   {path: 'forum/meu-perfil/:id', canActivate: [AuthGuard], component: MeuPerfilPageComponent, data: {title: 'Meu Perfil'}},
