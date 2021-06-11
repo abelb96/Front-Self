@@ -19,8 +19,14 @@ import { CriarPageModule } from './forum/criarpage/criarpage.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MyTopPageModule } from './forum/mytoppage/mytoppage.module';
 import { LikesPageModule } from './forum/likespage/likespage.module';
-import { NgxMaskModule } from 'ngx-mask';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+const maskConfigFunction: () => Partial<IConfig> = () => {
+  return {
+    validation: false,
+  };
+};
 
 
 @NgModule({
@@ -29,7 +35,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     HttpClientModule,
-    NgxMaskModule.forRoot(),
+    NgxMaskModule.forRoot(maskConfigFunction),
     BrowserModule,
     AppRoutingModule,
     HomeModule,

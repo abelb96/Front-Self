@@ -1,3 +1,4 @@
+import { AlertService } from './../../../shared/components/alert/alert.service';
 import { environment } from '../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -11,7 +12,7 @@ const API_URL = environment.ApiUrl;
 })
 export class AuthService {
 
-  constructor(private http: HttpClient, private userService: UserService) { }
+  constructor(private http: HttpClient, private userService: UserService, private alert: AlertService) { }
 
   authenticate(email: string, senha: string) {
 

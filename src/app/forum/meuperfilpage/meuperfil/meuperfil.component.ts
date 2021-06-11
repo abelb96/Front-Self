@@ -26,6 +26,7 @@ export class MeuPerfilComponent implements OnInit{
 
     this.topicoService.perfilUsuario(this.userService.getUserId()).forEach(dados => {
       this.perfil = dados[0]
+      this.upForm(dados[0])
       this.ativadorRotas.params.subscribe(params => {
          if(this.userService.getUserId() != params.id) return this.route.navigateByUrl('forum/')
       })
@@ -39,7 +40,16 @@ export class MeuPerfilComponent implements OnInit{
 
  }
 
+ upForm(form) {
+  this.editaForm.patchValue({
+    nome: form.nome,
+    sobrenome: form.sobrenome,
+    telefone: form.telefone
+  })
+ }
+
   edita(){
+      console.log(this.editaForm.valid)
     if(this.editaForm.valid && !this.editaForm.pending) {
       const newUser = this.editaForm.getRawValue();
       const userId = this.userService.getUserId();
@@ -47,8 +57,8 @@ export class MeuPerfilComponent implements OnInit{
         this.editaForm.disable();
         this.alertService.success('Perfil editado com sucesso')
         setTimeout(() => this.route.navigate([`forum/`]), 3000)
-      }),
-      err => console.log(err)
+      },
+      err => console.log(err))
     }
   }
 }

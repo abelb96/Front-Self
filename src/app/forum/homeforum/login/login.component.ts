@@ -44,11 +44,14 @@ export class LoginComponent implements OnInit {
       }
     },
     err => {
-        console.log(err);
+      if(err.status == 401) {
         this.loginForm.reset({
           email
         })
         this.alert.danger('Email ou Senha inválidos');
+      } else {
+        this.alert.danger('Problemas com o servidor, por favor tente novamente mais tarde.');
+      }
     });
   }
 }

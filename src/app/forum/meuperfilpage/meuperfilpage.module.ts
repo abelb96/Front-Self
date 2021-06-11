@@ -11,6 +11,7 @@ import { VMessageModule } from 'src/app/shared/components/vmessage/vmessage.modu
 import { MeuPerfilComponent } from './meuperfil/meuperfil.component';
 import { NgxMaskModule } from 'ngx-mask';
 
+
 @NgModule({
   declarations: [MeuPerfilPageComponent, MeuPerfilComponent],
   imports: [ CommonModule, FormsModule, ReactiveFormsModule, RouterModule, HttpClientModule, VMessageModule, FcomponentModule, AlertModule, BackButtonModule, NgxMaskModule ]

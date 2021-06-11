@@ -19,10 +19,10 @@ export class AppComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.router.events// me inscrevi no evento de rotas
-    .pipe(filter(event => event instanceof NavigationEnd))// se esse evento for navigatioend ai eu vou filtar
-    .pipe(map(() => this.atidavordeRota))//desse navigationend agora, eu vou pegar meu ativadorderotas...
-    .pipe(map((route) => { //e vou fazer um map...
+    this.router.events
+    .pipe(filter(event => event instanceof NavigationEnd))
+    .pipe(map(() => this.atidavordeRota))
+    .pipe(map((route) => {
       while(route.firstChild) route = route.firstChild;
       return route;
     }))
